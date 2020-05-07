@@ -20,6 +20,7 @@ def partition(arr, start, end, pivot):
         break
 
     arr[start], arr[end] = arr[end], arr[start]
+    start += 1
 
 
 def run_one_test(arr, pivot):
@@ -32,7 +33,7 @@ def run_one_test(arr, pivot):
   actual_right = arr[partition_point:]
 
   assert sorted(expected_left) == sorted(actual_left)
-  assert sorted(expected_right) == sorted(actual_right))
+  assert sorted(expected_right) == sorted(actual_right)
 
 def run_tests_for_arr(arr):
   run_one_test(arr.copy(), -1)
